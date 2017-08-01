@@ -1416,7 +1416,7 @@
                                                                 <rect key="frame" x="0.0" y="10" width="328" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jdH-Cw-7vR" id="t4X-fC-17W">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="328" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f6-QR-B2z">
@@ -1858,7 +1858,7 @@
                                                                 <rect key="frame" x="0.0" y="10" width="328" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffj-7g-83X" id="9Vi-kT-puW">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="328" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob1-9l-cOS">
@@ -2069,7 +2069,7 @@
                                                                     <action selector="clickWhatsapp:" destination="aZL-zV-uOW" eventType="touchUpInside" id="X4G-wu-dAH"/>
                                                                 </connections>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הודעת וואטסאפ" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-K9-Ovg">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="שלח סמס" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-K9-Ovg">
                                                                 <rect key="frame" x="80" y="10" width="70" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="Hoz-bR-uGx"/>
@@ -2948,7 +2948,7 @@
                         <viewControllerLayoutGuide type="bottom" id="s2P-EV-yo5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mw4-08-A1Y">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8v-Wa-TJQ" userLabel="10">
@@ -2961,10 +2961,10 @@
                                 <color key="textColor" red="0.1960784314" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAH-Ab-ce3">
-                                <rect key="frame" x="10" y="59" width="280" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAH-Ab-ce3">
+                                <rect key="frame" x="10" y="48" width="280" height="238"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="EkE-ef-C39"/>
+                                    <constraint firstAttribute="height" constant="238" id="EkE-ef-C39"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2977,12 +2977,12 @@
                             <constraint firstItem="VAH-Ab-ce3" firstAttribute="trailing" secondItem="F8v-Wa-TJQ" secondAttribute="trailing" id="E0P-5U-myo"/>
                             <constraint firstItem="VAH-Ab-ce3" firstAttribute="centerX" secondItem="mw4-08-A1Y" secondAttribute="centerX" id="Mwk-3Z-42A"/>
                             <constraint firstItem="VAH-Ab-ce3" firstAttribute="leading" secondItem="F8v-Wa-TJQ" secondAttribute="leading" id="S51-3F-7Jc"/>
-                            <constraint firstItem="VAH-Ab-ce3" firstAttribute="top" secondItem="F8v-Wa-TJQ" secondAttribute="bottom" constant="8" id="Wop-R5-Fif"/>
+                            <constraint firstItem="VAH-Ab-ce3" firstAttribute="top" secondItem="F8v-Wa-TJQ" secondAttribute="bottom" constant="-3" id="Wop-R5-Fif"/>
                             <constraint firstItem="F8v-Wa-TJQ" firstAttribute="top" secondItem="GKM-GP-aHA" secondAttribute="bottom" constant="10" id="kRv-2L-MDW"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="300"/>
                     <connections>
                         <outlet property="lblMessage" destination="VAH-Ab-ce3" id="giS-w6-NbJ"/>
                         <outlet property="lblTitle" destination="F8v-Wa-TJQ" id="3e4-UA-YkX"/>
@@ -2990,7 +2990,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baZ-1D-2qd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="2568"/>
+            <point key="canvasLocation" x="948.75" y="2567.9577464788731"/>
         </scene>
         <!--Message Controller-->
         <scene sceneID="8Le-xI-gFb">
@@ -3325,7 +3325,7 @@
                                                                 <rect key="frame" x="0.0" y="10" width="328" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xe0-zr-5VY" id="sI0-nB-n0v">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="328" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzL-MV-Vtm">
@@ -3813,7 +3813,7 @@
                                                     <constraint firstAttribute="height" constant="80" id="tvs-8f-bfn"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="הכנס כאן את שם החברה" textAlignment="right" minimumFontSize="17" background="NewFieldBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="QpG-Q9-7XB" customClass="RightPaddingTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="הכנס כאן את שם החברה" textAlignment="right" minimumFontSize="17" background="NewFieldBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="QpG-Q9-7XB" customClass="RightPaddingTextField">
                                                 <rect key="frame" x="30" y="100" width="260" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="4st-I3-8y7"/>
@@ -3830,7 +3830,7 @@
                                                     <constraint firstAttribute="width" constant="20" id="OXf-07-6wg"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="מספר נייד" textAlignment="right" minimumFontSize="17" background="NewFieldBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="Nio-pU-eJv" customClass="RightPaddingTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="מספר נייד" textAlignment="right" minimumFontSize="17" background="NewFieldBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="Nio-pU-eJv" customClass="RightPaddingTextField">
                                                 <rect key="frame" x="30" y="160" width="260" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Tzg-H3-WQb"/>

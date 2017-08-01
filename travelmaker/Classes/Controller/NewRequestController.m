@@ -57,35 +57,35 @@ NSMutableArray *arrayRequestCarType;
     NSString *textVehicle = [txtTypeVehicle text];
     if (textVehicle == nil || [textVehicle isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס את סוג הרכב" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס את סוג הרכב" ButtonName:@"אשר"];
         return;
     }
     
     NSString *textTime = [txtEvacuationTime text];
     if (textTime == nil || [textTime isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס זמן סיום" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס זמן סיום" ButtonName:@"אשר"];
         return;
     }
 
     NSString *textStartArea = [txtStartArea text];
     if (textStartArea == nil || [textStartArea isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס מוצא" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס מוצא" ButtonName:@"אשר"];
         return;
     }
 
     NSString *textEndArea = [txtEndArea text];
     if (textEndArea == nil || [textEndArea isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס איזור" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס איזור" ButtonName:@"אשר"];
         return;
     }
 
     NSString *textDate = [txtDate text];
     if (textDate == nil || [textDate isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס תאריך" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס תאריך" ButtonName:@"אשר"];
         return;
     }
     

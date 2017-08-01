@@ -120,13 +120,13 @@
     [cell.lblLocation setText:strLocation];
     [cell.lblDateStart setText:displayDate];
     
-    if (indexPath.row % 2 == 0)
+    if (indexPath.row % 2)
     {
-        [cell.layer setBackgroundColor:[UIColor colorWithRed:222.0/255.0 green:222.0/255.0 blue:222.0/255.0 alpha:1.0].CGColor];
+        cell.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:222.0/255.0 blue:222.0/255.0 alpha:1.0];
     }
     else
     {
-        [cell.layer setBackgroundColor:[UIColor whiteColor].CGColor];
+        cell.backgroundColor = [UIColor whiteColor];
     }
     
     cell.leftUtilityButtons = [self leftButtons];

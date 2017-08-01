@@ -48,28 +48,28 @@
     NSString *fullname = [txtFullName text];
     if (fullname == nil || [fullname isEqualToString:@""] == YES)
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס שם מלא" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס שם מלא" ButtonName:@"אשר"];
         return;
     }
     
     NSString *email = [txtEmail text];
     if ([Common checkEmailValidation:email] == NO)
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס כתובת אימייל תקינה" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס כתובת אימייל תקינה" ButtonName:@"אשר"];
         return;
     }
     
     NSString *phone = [txtPhone text];
     if (phone == nil || [phone isEqualToString:@""] == YES)
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס מספר טלפון" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס מספר טלפון" ButtonName:@"אשר"];
         return;
     }
     
     NSString *description = [txtDescription text];
     if (description == nil || [description isEqualToString:@""] == YES)
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס תיאור" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס תיאור" ButtonName:@"אשר"];
         return;
     }
     
@@ -101,7 +101,7 @@
             }
             else
             {
-                [Common showAlert:@"תקלה" Message:@"הודעה לא נשלחה בשל תקלה" ButtonName:@"אשר"];
+                [Common showAlert:@"הודעה לא נשלחה" Message:@"אנא בדוק חיבור לאינטרנט ונסה שנית" ButtonName:@"אשר"];
             }
         });
     }];

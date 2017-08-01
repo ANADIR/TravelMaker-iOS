@@ -15,6 +15,7 @@
 #import "NewRequestController.h"
 #import "NewOfferController.h"
 
+
 @implementation RequestDetailController
 
 @synthesize trafficData;
@@ -174,14 +175,27 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if([status isEqualToString:@"done"] == YES)
             {
-//                NSString *url = @"whatsapp://send";
-//                url = [NSString stringWithFormat:@"%@?abid=%@", url, cellphone];
-//                NSURL *whatsappURL = [NSURL URLWithString:url];
-//                if ([[UIApplication sharedApplication] canOpenURL: whatsappURL])
-//                    [[UIApplication sharedApplication] openURL: whatsappURL];
-                NSURL *smsUrl = [NSURL URLWithString:@"sms:"];
-                if ([[UIApplication sharedApplication] canOpenURL:smsUrl])
-                    [[UIApplication sharedApplication] openURL:smsUrl];
+                //NSString *smsUrl = [@"sms:" stringByAppendingString:cellphone];
+                //if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:smsUrl]])
+                //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:smsUrl]];
+                
+                if(![MFMessageComposeViewController canSendText]) {
+                    UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"תקלה" message:@"מכשיר זה לא מאפשר שליחת סמסים" delegate:nil cancelButtonTitle:@"אישור" otherButtonTitles:nil];
+                    [warningAlert show];
+                    return;
+                }
+                
+                NSArray *recipents = @[cellphone];
+                NSString *message = @"שלום, אשמח לקבל פרטים נוספים על הנסיעה לסגירה שפרסמת באפליקציה Travel Maker.";
+                
+                MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+                messageController.messageComposeDelegate = self;
+                [messageController setRecipients:recipents];
+                [messageController setBody:message];
+                
+                // Present message view controller on screen
+                [self presentViewController:messageController animated:YES completion:nil];
+                
             }
             else
             {
@@ -341,6 +355,30 @@
 - (void)closePopup
 {
     [self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
+}
+
+#pragma mark - handle sms
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+            
+        case MessageComposeResultFailed:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"בעיה בשליחה" message:@"לא ניתן לשלוח סמס ממכשיר זה" delegate:nil cancelButtonTitle:@"אישור" otherButtonTitles:nil];
+            [warningAlert show];
+            break;
+        }
+            
+        case MessageComposeResultSent:
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

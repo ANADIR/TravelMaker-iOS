@@ -79,7 +79,7 @@
     }
     else
     {
-        [Common showAlert:@"תקלה" Message:@"מספר הטלפון לא חוקי" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים לא תקינים" Message:@"מספר הטלפון לא חוקי" ButtonName:@"אשר"];
     }
 }
 
@@ -142,7 +142,7 @@
                 NSString * status = [jsonDict objectForKey:@"status"];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if([status isEqualToString:@"done"] == NO) {
-                        [Common showAlert:@"תקלה" Message:@"רישום נכשל" ButtonName:@"אשר"];
+                        [Common showAlert:@"פרטים לא תקינים" Message:@"רישום נכשל" ButtonName:@"אשר"];
                     }
                     else
                     {
@@ -202,7 +202,7 @@
     }
     else
     {
-        [Common showAlert:@"תקלה" Message:@"מספר הטלפון לא חוקי" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים לא תקינים" Message:@"מספר הטלפון לא חוקי" ButtonName:@"אשר"];
     }
 }
 

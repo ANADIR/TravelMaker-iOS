@@ -65,42 +65,42 @@ NSMutableArray *arrayOfferCarType;
     NSString *textVehicle = [txtTypeVehicle text];
     if (textVehicle == nil || [textVehicle isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס את סוג הרכב" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס את סוג הרכב" ButtonName:@"אשר"];
         return;
     }
     
     NSString *textStartTime = [txtStartTime text];
     if (textStartTime == nil || [textStartTime isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס זמן התחלה" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס זמן התחלה" ButtonName:@"אשר"];
         return;
     }
     
     NSString *textEndTime = [txtEndTime text];
     if (textEndTime == nil || [textEndTime isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס זמן סיום" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס זמן סיום" ButtonName:@"אשר"];
         return;
     }
     
     NSString *textStartArea = [txtStartArea text];
     if (textStartArea == nil || [textStartArea isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס מוצא" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס מוצא" ButtonName:@"אשר"];
         return;
     }
     
     NSString *textEndArea = [txtEndArea text];
     if (textEndArea == nil || [textEndArea isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס יעד" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס יעד" ButtonName:@"אשר"];
         return;
     }
     
     NSString *textDate = [txtDate text];
     if (textDate == nil || [textDate isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס תאריך" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס תאריך" ButtonName:@"אשר"];
         return;
     }
     
@@ -113,7 +113,7 @@ NSMutableArray *arrayOfferCarType;
     NSString *textPrice = [txtPrice text];
     if (textPrice == nil || [textPrice isEqualToString:@""])
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס מחיר" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים חסרים" Message:@"אנא הכנס מחיר" ButtonName:@"אשר"];
         return;
     }
 

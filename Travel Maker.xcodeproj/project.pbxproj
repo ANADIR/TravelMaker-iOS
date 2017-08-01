@@ -50,6 +50,7 @@
 		8B858D581C1E6C5100A80CB8 /* NewOfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B858D571C1E6C5100A80CB8 /* NewOfferController.m */; };
 		8B9AC23C1C18248400572703 /* TrafficViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9AC23B1C18248400572703 /* TrafficViewCell.m */; };
 		A9FDEC221F2F8AB6004313B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FDEC211F2F8AB6004313B2 /* GoogleService-Info.plist */; };
+		A9FDEC251F309A18004313B2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FDEC241F309A11004313B2 /* MessageUI.framework */; };
 		ED5556E34896EC267ABFDC14 /* libPods-Travel Maker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BE5F611D6016B55320A451 /* libPods-Travel Maker.a */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		8B9AC23B1C18248400572703 /* TrafficViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrafficViewCell.m; path = Classes/View/TrafficViewCell.m; sourceTree = "<group>"; };
 		A9FDEC211F2F8AB6004313B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9FDEC231F2FA85B004313B2 /* Travel Maker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Travel Maker.entitlements"; sourceTree = "<group>"; };
+		A9FDEC241F309A11004313B2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B03148A9CD3082A98687DA2D /* Pods-Travel Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Maker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel Maker/Pods-Travel Maker.release.xcconfig"; sourceTree = "<group>"; };
 		B8BE5F611D6016B55320A451 /* libPods-Travel Maker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel Maker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FDEC251F309A18004313B2 /* MessageUI.framework in Frameworks */,
 				ED5556E34896EC267ABFDC14 /* libPods-Travel Maker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +167,7 @@
 		4B8CE45DF813D31FC38813E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9FDEC241F309A11004313B2 /* MessageUI.framework */,
 				B8BE5F611D6016B55320A451 /* libPods-Travel Maker.a */,
 			);
 			name = Frameworks;

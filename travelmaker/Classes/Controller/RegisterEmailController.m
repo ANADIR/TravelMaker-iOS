@@ -65,14 +65,14 @@
     NSString *email = [txtEmail text];
     if ([Common checkEmailValidation:email] == NO)
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הכנס כתובת אימייל תקינה" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים לא תקינים" Message:@"אנא הכנס כתובת אימייל תקינה" ButtonName:@"אשר"];
         return;
     }
     
     NSString *passwd = [txtPasswd text];
     if ([Common checkPasswordValidation:passwd] == NO)
     {
-        [Common showAlert:@"תקלה" Message:@"אנא הזן סיסמה באורך 6 תווים לפחות" ButtonName:@"אשר"];
+        [Common showAlert:@"פרטים לא תקינים" Message:@"אנא הזן סיסמה באורך 6 תווים לפחות" ButtonName:@"אשר"];
         return;
     }
     

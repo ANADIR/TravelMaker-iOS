@@ -108,13 +108,14 @@
     [cell.lblMessage setText:[messageData objectForKey:@"text"]];
     [cell.lblTitle setText:[messageData objectForKey:@"title"]];
     
-    if (indexPath.row % 2 == 0)
+    if (indexPath.row % 2)
     {
-        [cell.layer setBackgroundColor:[UIColor colorWithRed:222.0/255.0 green:222.0/255.0 blue:222.0/255.0 alpha:1.0].CGColor];
+        
+        cell.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:222.0/255.0 blue:222.0/255.0 alpha:1.0];
     }
     else
     {
-        [cell.layer setBackgroundColor:[UIColor whiteColor].CGColor];
+        cell.backgroundColor = [UIColor whiteColor];
     }
     
     cell.leftUtilityButtons = [self leftButtons];
@@ -147,7 +148,7 @@
     else
     {
         MessageDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"messageDetailVC"];
-        [controller.view setFrame:CGRectMake(0, 100, 300, 200)];
+        [controller.view setFrame:CGRectMake(0, 100, 300, 300)];
         controller.strTitle = [messageData objectForKey:@"title"];
         controller.strMessage = [messageData objectForKey:@"text"];
         [self presentPopupViewController:controller animationType:MJPopupViewAnimationFade];

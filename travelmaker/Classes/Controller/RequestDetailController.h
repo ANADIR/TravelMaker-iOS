@@ -9,8 +9,9 @@
 #import "SuperViewController.h"
 #import "NewTripController.h"
 #import "TrafficController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface RequestDetailController : SuperViewController <UITableViewDataSource, UITableViewDelegate, NewTripDelegate>
+@interface RequestDetailController : SuperViewController <UITableViewDataSource, UITableViewDelegate, NewTripDelegate,MFMessageComposeViewControllerDelegate>
 {
     NSString *cellphone;
 }

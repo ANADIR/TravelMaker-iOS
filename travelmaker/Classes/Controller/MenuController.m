@@ -188,7 +188,7 @@ BOOL bPushEnabled;
 {
     [self.menuController setMenuState:MFSideMenuStateClosed completion:^{ }];
 
-    NSString *texttoshare = @"כנס עכשיו לחנות אפסטור ותוריד את אפליקצית Travel Maker לחברות הסעות. מומלץ!";
+    NSString *texttoshare = @"ממליץ לך להוריד את אפליקצית טרבל מייקר ולסגור עוד היום הסעות! https://itunes.apple.com/us/app/travel-maker/id1108160084?ls=1&mt=8";
     NSArray *activityItems = @[texttoshare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint];

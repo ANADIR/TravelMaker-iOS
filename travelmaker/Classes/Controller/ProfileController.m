@@ -179,7 +179,7 @@ bool isEditable = NO;
                 NSString * status = [jsonDict objectForKey:@"status"];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if([status isEqualToString:@"done"] == YES) {
-                        [Common showAlert:@"Success" Message:@"פרטי פרופיל עודכנו בהצלחה" ButtonName:@"אשר"];
+                        [Common showAlert:@"עידכון הושלם בהצלחה" Message:@"פרטי פרופיל עודכנו בהצלחה" ButtonName:@"אשר"];
                         
                         // save
                         [preferences setObject:new_name forKey:@"fullname"];
@@ -188,7 +188,7 @@ bool isEditable = NO;
                     }
                     else
                     {
-                        [Common showAlert:@"תקלה" Message:@"פרופיל לא עודכן בשל תקלה" ButtonName:@"אשר"];
+                        [Common showAlert:@"תקלה" Message:@"בדוק חיבור לאינטרנט תקין ונסה שנית" ButtonName:@"אשר"];
                     }
                 });
             }];

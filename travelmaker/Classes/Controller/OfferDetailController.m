@@ -127,9 +127,14 @@
 
 - (IBAction)clickClose:(id)sender
 {
-    NSString *trafficId = [trafficData objectForKey:@"id"];
+    NSString *trafficId = [trafficData objectForKey:@"traffic_id"];
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    NSString *user_id = [preferences objectForKey:@"user_id"];
+    
     NSString * closureTripUrl = @"http://travelmakerdata.co.nf/server/actions/tripClosureRequest.php";
-    closureTripUrl = [NSString stringWithFormat:@"%@?trip_id_to_close=%@", closureTripUrl, trafficId];
+    closureTripUrl = [NSString stringWithFormat:@"%@?trip_id_to_close=%@&user_id=%@", closureTripUrl, trafficId, user_id];
+    
+    NSLog(@"closureTripUrl ================ %@",closureTripUrl);
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [DCDefines getHttpAsyncResponse:closureTripUrl :^(NSData *data, NSError *connectionError) {
@@ -209,26 +214,34 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if([status isEqualToString:@"done"] == YES)
             {
-//                NSString *url = @"whatsapp://send";
-//                url = [NSString stringWithFormat:@"%@?abid=%@", url, cellphone];
-//                NSURL *whatsappURL = [NSURL URLWithString:url];
-//                if ([[UIApplication sharedApplication] canOpenURL: whatsappURL])
-//                {
-//                    [[UIApplication sharedApplication] openURL: whatsappURL];
-//                }
-                NSURL *smsUrl = [NSURL URLWithString:@"sms:"];
-                if ([[UIApplication sharedApplication] canOpenURL:smsUrl])
-                    [[UIApplication sharedApplication] openURL:smsUrl];
-
+                //NSString *smsUrl = [@"sms:" stringByAppendingString:cellphone];
+                //if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:smsUrl]])
+                //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:smsUrl]];
+                
+                if(![MFMessageComposeViewController canSendText]) {
+                    UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"תקלה" message:@"מכשיר זה לא מאפשר שליחת סמסים" delegate:nil cancelButtonTitle:@"אישור" otherButtonTitles:nil];
+                    [warningAlert show];
+                    return;
+                }
+                
+                NSArray *recipents = @[cellphone];
+                NSString *message = @"שלום, אשמח לקבל פרטים נוספים על הנסיעה לסגירה שפרסמת באפליקציה Travel Maker.";
+                
+                MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+                messageController.messageComposeDelegate = self;
+                [messageController setRecipients:recipents];
+                [messageController setBody:message];
+                
+                // Present message view controller on screen
+                [self presentViewController:messageController animated:YES completion:nil];
+                
             }
             else
             {
                 [Common showAlert:@"תקלה" Message:@"הפעולה נכשלה" ButtonName:@"אשר"];
             }
         });
-
     }];
-
 }
 
 - (void)handleTelephone

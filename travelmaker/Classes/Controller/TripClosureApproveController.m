@@ -50,8 +50,12 @@
 - (void)postResponseTripClosure:(BOOL)response
 {
     NSString *responseUrl = @"http://travelmakerdata.co.nf/server/actions/responseToClosureRequest.php";
-    responseUrl = [NSString stringWithFormat:@"%@?Response=%@", responseUrl, response?@"YES":@"NO"];
-    responseUrl = [NSString stringWithFormat:@"%@&trip_id_to_close=%@", responseUrl, strTripId];
+    responseUrl = [NSString stringWithFormat:@"%@?response=%@", responseUrl, response?@"YES":@"NO"];
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    NSString *user_id = [preferences objectForKey:@"user_id"];
+    
+    responseUrl = [NSString stringWithFormat:@"%@&trip_id_to_close=%@&user_id=%@", responseUrl, strTripId, user_id];
+    
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [DCDefines getHttpAsyncResponse:responseUrl :^(NSData *data, NSError *connectionError) {
@@ -77,7 +81,7 @@
             }
             else
             {
-                [Common showAlert:@"תקלה" Message:@"הודעתך נשלחה בהצלחה." ButtonName:@"אשר"];
+                [Common showAlert:@"אישור פעולה" Message:@"הודעתך נשלחה בהצלחה." ButtonName:@"אשר"];
             }
         });
     }];
